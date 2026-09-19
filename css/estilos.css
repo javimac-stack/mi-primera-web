@@ -1,3 +1,13 @@
+:root {
+    --negro: #0b0b0b;
+    --negro-suave: #171717;
+
+    --blanco: #ffffff;
+    --gris: #9a9a9a;
+
+    --amarillo: #ffd400;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,8 +19,9 @@ html {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #0d0d0d;
-    color: #ffffff;
+
+    background: var(--negro);
+    color: var(--blanco);
 }
 
 a {
@@ -32,8 +43,10 @@ a {
     width: 100%;
     top: 0;
 
-    background: rgba(13, 13, 13, 0.9);
+    background: rgba(11, 11, 11, 0.92);
     backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 212, 0, 0.12);
 
     z-index: 100;
 }
@@ -41,6 +54,8 @@ a {
 .logo {
     font-weight: bold;
     letter-spacing: 2px;
+
+    color: var(--amarillo);
 }
 
 nav {
@@ -49,10 +64,12 @@ nav {
 }
 
 nav a {
+    color: var(--blanco);
     opacity: 0.7;
 }
 
 nav a:hover {
+    color: var(--amarillo);
     opacity: 1;
 }
 
@@ -74,7 +91,8 @@ nav a:hover {
 .etiqueta {
     font-size: 13px;
     letter-spacing: 3px;
-    opacity: 0.55;
+
+    color: var(--amarillo);
 }
 
 .hero h1 {
@@ -82,11 +100,14 @@ nav a:hover {
     line-height: 0.95;
 
     margin: 20px 0;
+
+    color: var(--blanco);
 }
 
 .hero h1 span {
     display: block;
-    opacity: 0.35;
+
+    color: var(--amarillo);
 }
 
 .descripcion {
@@ -95,7 +116,7 @@ nav a:hover {
     font-size: 20px;
     line-height: 1.6;
 
-    opacity: 0.65;
+    color: var(--gris);
 }
 
 .boton {
@@ -103,16 +124,23 @@ nav a:hover {
 
     display: inline-block;
 
-    border: 1px solid #ffffff;
+    background: var(--amarillo);
+    color: var(--negro);
+
+    border: 1px solid var(--amarillo);
 
     padding: 14px 24px;
 
     width: fit-content;
+
+    font-weight: bold;
+
+    transition: 0.25s;
 }
 
 .boton:hover {
-    background: white;
-    color: black;
+    background: transparent;
+    color: var(--amarillo);
 }
 
 
@@ -129,6 +157,8 @@ nav a:hover {
     font-size: clamp(40px, 5vw, 72px);
 
     margin: 15px 0 50px;
+
+    color: var(--blanco);
 }
 
 
@@ -145,7 +175,9 @@ nav a:hover {
 .imagen-placeholder {
     aspect-ratio: 4 / 3;
 
-    background: #1c1c1c;
+    background: var(--negro-suave);
+
+    border: 1px solid rgba(255, 212, 0, 0.18);
 
     display: flex;
     align-items: center;
@@ -154,16 +186,18 @@ nav a:hover {
     font-size: 14px;
     letter-spacing: 2px;
 
-    opacity: 0.8;
+    color: var(--amarillo);
 }
 
 .proyecto h3 {
     font-size: 24px;
     margin-bottom: 5px;
+
+    color: var(--blanco);
 }
 
 .proyecto p {
-    opacity: 0.5;
+    color: var(--gris);
 }
 
 
@@ -177,12 +211,17 @@ nav a:hover {
     gap: 50px;
 }
 
+.servicios > div {
+    border-top: 2px solid var(--amarillo);
+    padding-top: 20px;
+}
+
 .servicios h3 {
     font-size: 26px;
 }
 
 .servicios p {
-    opacity: 0.6;
+    color: var(--gris);
     line-height: 1.6;
 }
 
@@ -195,7 +234,7 @@ nav a:hover {
     font-size: 26px;
     line-height: 1.5;
 
-    opacity: 0.7;
+    color: var(--gris);
 }
 
 
@@ -207,6 +246,8 @@ nav a:hover {
 
 .contacto h2 {
     font-size: clamp(55px, 8vw, 110px);
+
+    color: var(--amarillo);
 }
 
 
@@ -215,7 +256,9 @@ nav a:hover {
 footer {
     padding: 40px 8%;
 
-    opacity: 0.4;
+    border-top: 1px solid rgba(255, 212, 0, 0.15);
+
+    color: var(--gris);
 }
 
 
@@ -236,5 +279,4 @@ footer {
         padding-left: 6%;
         padding-right: 6%;
     }
-
 }
